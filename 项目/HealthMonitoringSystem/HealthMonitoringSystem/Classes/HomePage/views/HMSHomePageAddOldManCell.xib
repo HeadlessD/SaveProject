@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMSHomePageAddOldManCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBj-Ls-M8b">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="120"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage_addManAdd" translatesAutoresizingMaskIntoConstraints="NO" id="lfU-Oa-BA2">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="120"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lfU-Oa-BA2" firstAttribute="top" secondItem="PBj-Ls-M8b" secondAttribute="top" id="QtY-rc-Mai"/>
+                            <constraint firstItem="lfU-Oa-BA2" firstAttribute="leading" secondItem="PBj-Ls-M8b" secondAttribute="leading" id="aRQ-Rf-o4t"/>
+                            <constraint firstAttribute="bottom" secondItem="lfU-Oa-BA2" secondAttribute="bottom" id="aSd-Fd-H6H"/>
+                            <constraint firstAttribute="trailing" secondItem="lfU-Oa-BA2" secondAttribute="trailing" id="tuD-Qq-Whh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PBj-Ls-M8b" secondAttribute="trailing" id="UbC-67-Kiq"/>
+                <constraint firstAttribute="bottom" secondItem="PBj-Ls-M8b" secondAttribute="bottom" id="UnU-2V-sSt"/>
+                <constraint firstItem="PBj-Ls-M8b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UwJ-63-cBl"/>
+                <constraint firstItem="PBj-Ls-M8b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mMe-B3-OMS"/>
+            </constraints>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="homepage_addManAdd" width="42" height="102"/>
+    </resources>
+</document>

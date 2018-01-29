@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HMSMonitorCycleView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深睡眠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-R2-LDc">
+                    <rect key="frame" x="10" y="90" width="89" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="浅睡眠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-JP-7XC">
+                    <rect key="frame" x="99" y="90" width="88.5" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-NY-do1">
+                    <rect key="frame" x="187.5" y="90" width="89" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="清醒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6I-HS-F7K">
+                    <rect key="frame" x="276.5" y="90" width="88.5" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmp-kJ-M8z" customClass="HMSSleepPercentView">
+                    <rect key="frame" x="25" y="18" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="X0g-5h-Ung"/>
+                        <constraint firstAttribute="height" constant="60" id="jTA-c1-MV3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-j0-E3x" customClass="HMSSleepPercentView">
+                    <rect key="frame" x="112.5" y="18" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="6eb-KV-Xls"/>
+                        <constraint firstAttribute="width" constant="60" id="BWX-a8-c5S"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpC-pa-AaZ" customClass="HMSSleepPercentView">
+                    <rect key="frame" x="201.5" y="18" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="YYT-mc-kbj"/>
+                        <constraint firstAttribute="width" constant="60" id="kCG-kg-mt1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qi-jl-T3e" customClass="HMSSleepPercentView">
+                    <rect key="frame" x="291" y="18" width="60" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="IDy-NP-LR9"/>
+                        <constraint firstAttribute="height" constant="60" id="PyF-sg-mLW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t4M-JP-7XC" firstAttribute="top" secondItem="Xmp-kJ-M8z" secondAttribute="bottom" constant="12" id="06N-Yc-95g"/>
+                <constraint firstAttribute="trailing" secondItem="d6I-HS-F7K" secondAttribute="trailing" constant="10" id="4G7-fj-yB4"/>
+                <constraint firstItem="Xmp-kJ-M8z" firstAttribute="centerX" secondItem="lmX-R2-LDc" secondAttribute="centerX" id="7fv-py-gE9"/>
+                <constraint firstItem="d6I-HS-F7K" firstAttribute="leading" secondItem="L9V-NY-do1" secondAttribute="trailing" id="CKQ-nZ-dpZ"/>
+                <constraint firstItem="TpC-pa-AaZ" firstAttribute="centerX" secondItem="L9V-NY-do1" secondAttribute="centerX" id="GVZ-Tp-ZaI"/>
+                <constraint firstItem="d6I-HS-F7K" firstAttribute="width" secondItem="lmX-R2-LDc" secondAttribute="width" id="Kjg-lG-vgX"/>
+                <constraint firstItem="5Qi-jl-T3e" firstAttribute="centerX" secondItem="d6I-HS-F7K" secondAttribute="centerX" id="OIV-AM-odA"/>
+                <constraint firstAttribute="bottom" secondItem="d6I-HS-F7K" secondAttribute="bottom" constant="20" id="Om3-ps-ek9"/>
+                <constraint firstItem="lPp-j0-E3x" firstAttribute="centerX" secondItem="t4M-JP-7XC" secondAttribute="centerX" id="QQt-RL-5Ft"/>
+                <constraint firstItem="t4M-JP-7XC" firstAttribute="top" secondItem="lPp-j0-E3x" secondAttribute="bottom" constant="12" id="SXb-Ke-XZE"/>
+                <constraint firstItem="lmX-R2-LDc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="WKJ-mV-SHa"/>
+                <constraint firstItem="L9V-NY-do1" firstAttribute="top" secondItem="TpC-pa-AaZ" secondAttribute="bottom" constant="12" id="aKU-rW-Lz8"/>
+                <constraint firstItem="t4M-JP-7XC" firstAttribute="width" secondItem="lmX-R2-LDc" secondAttribute="width" id="c4p-Gp-4tI"/>
+                <constraint firstAttribute="bottom" secondItem="t4M-JP-7XC" secondAttribute="bottom" constant="20" id="dLZ-sp-EOb"/>
+                <constraint firstAttribute="bottom" secondItem="L9V-NY-do1" secondAttribute="bottom" constant="20" id="dbU-Cf-mXv"/>
+                <constraint firstAttribute="bottom" secondItem="lmX-R2-LDc" secondAttribute="bottom" constant="20" id="fM5-Ld-P60"/>
+                <constraint firstItem="t4M-JP-7XC" firstAttribute="leading" secondItem="lmX-R2-LDc" secondAttribute="trailing" id="ifc-Dk-TJk"/>
+                <constraint firstItem="d6I-HS-F7K" firstAttribute="top" secondItem="5Qi-jl-T3e" secondAttribute="bottom" constant="12" id="kPg-g1-fi7"/>
+                <constraint firstItem="L9V-NY-do1" firstAttribute="width" secondItem="lmX-R2-LDc" secondAttribute="width" id="wdp-Bt-KEu"/>
+                <constraint firstItem="L9V-NY-do1" firstAttribute="leading" secondItem="t4M-JP-7XC" secondAttribute="trailing" id="wiB-AS-5fG"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="awakSleepViw" destination="5Qi-jl-T3e" id="IeD-HD-lmD"/>
+                <outlet property="deepSleepView" destination="Xmp-kJ-M8z" id="WCn-FM-1Dh"/>
+                <outlet property="lightSleepView" destination="lPp-j0-E3x" id="BFU-a2-Pw7"/>
+                <outlet property="remSleepView" destination="TpC-pa-AaZ" id="O7K-DR-dc3"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMSHomePageOldManCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODt-N7-LAT">
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="120"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaul_oldManHeaderImg" translatesAutoresizingMaskIntoConstraints="NO" id="l11-BU-lsM">
+                                <rect key="frame" x="15" y="15" width="90" height="90"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="JdS-a1-NBI"/>
+                                    <constraint firstAttribute="width" constant="90" id="Xhn-ZE-p4a"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老张" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Z1-6p-Hdj">
+                                <rect key="frame" x="125" y="19" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9f-dH-12D">
+                                <rect key="frame" x="253" y="12" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Sop-vJ-efb"/>
+                                    <constraint firstAttribute="height" constant="25" id="njp-BJ-15s"/>
+                                </constraints>
+                                <state key="normal" image="homepage_addoldManCardIcon"/>
+                                <connections>
+                                    <action selector="oldManCardAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="K3h-eJ-Jog"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personalCenter_man" translatesAutoresizingMaskIntoConstraints="NO" id="lQO-qG-1fa">
+                                <rect key="frame" x="125" y="52" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="9dp-kw-Lnr"/>
+                                    <constraint firstAttribute="width" constant="16" id="u8d-Ko-Ztb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="父亲" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nl-rh-PsW">
+                                <rect key="frame" x="149" y="53" width="129" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨晚睡眠状况" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tW-5O-glJ">
+                                <rect key="frame" x="125" y="80" width="80" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DPS-g8-YJD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage_sleepGood" translatesAutoresizingMaskIntoConstraints="NO" id="xuf-Et-ASH">
+                                <rect key="frame" x="217" y="78" width="40" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="AGa-s5-pyK"/>
+                                    <constraint firstAttribute="height" constant="20" id="AK5-ad-Q34"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8tW-5O-glJ" firstAttribute="leading" secondItem="lQO-qG-1fa" secondAttribute="leading" id="2M3-4b-1f8"/>
+                            <constraint firstItem="7Z1-6p-Hdj" firstAttribute="leading" secondItem="l11-BU-lsM" secondAttribute="trailing" constant="20" id="9Ht-cT-Z6S"/>
+                            <constraint firstItem="l11-BU-lsM" firstAttribute="top" secondItem="ODt-N7-LAT" secondAttribute="top" constant="15" id="9X7-cd-Jwg"/>
+                            <constraint firstAttribute="trailing" secondItem="1nl-rh-PsW" secondAttribute="trailing" constant="12" id="Eng-u2-MBf"/>
+                            <constraint firstItem="l11-BU-lsM" firstAttribute="leading" secondItem="ODt-N7-LAT" secondAttribute="leading" constant="15" id="NTc-he-sxa"/>
+                            <constraint firstItem="lQO-qG-1fa" firstAttribute="centerY" secondItem="l11-BU-lsM" secondAttribute="centerY" id="O2m-rc-5aI"/>
+                            <constraint firstItem="xuf-Et-ASH" firstAttribute="leading" secondItem="8tW-5O-glJ" secondAttribute="trailing" constant="12" id="Tep-DL-jcj"/>
+                            <constraint firstItem="1nl-rh-PsW" firstAttribute="leading" secondItem="lQO-qG-1fa" secondAttribute="trailing" constant="8" id="Zvt-dB-5zl"/>
+                            <constraint firstAttribute="trailing" secondItem="e9f-dH-12D" secondAttribute="trailing" constant="12" id="cvD-Sa-mnI"/>
+                            <constraint firstItem="e9f-dH-12D" firstAttribute="leading" secondItem="7Z1-6p-Hdj" secondAttribute="trailing" constant="20" id="eAl-8R-N00"/>
+                            <constraint firstItem="e9f-dH-12D" firstAttribute="top" secondItem="ODt-N7-LAT" secondAttribute="top" constant="12" id="k59-o6-3oi"/>
+                            <constraint firstItem="lQO-qG-1fa" firstAttribute="leading" secondItem="l11-BU-lsM" secondAttribute="trailing" constant="20" id="neG-cw-l9y"/>
+                            <constraint firstItem="7Z1-6p-Hdj" firstAttribute="bottom" secondItem="lQO-qG-1fa" secondAttribute="bottom" constant="-28" id="oaP-VY-E7D"/>
+                            <constraint firstItem="8tW-5O-glJ" firstAttribute="top" secondItem="lQO-qG-1fa" secondAttribute="top" constant="28" id="qoh-NW-Ynp"/>
+                            <constraint firstItem="xuf-Et-ASH" firstAttribute="centerY" secondItem="8tW-5O-glJ" secondAttribute="centerY" id="uWY-Pi-Jg4"/>
+                            <constraint firstItem="1nl-rh-PsW" firstAttribute="centerY" secondItem="lQO-qG-1fa" secondAttribute="centerY" id="yvK-oS-fGE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ODt-N7-LAT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Sp-wo-qKo"/>
+                <constraint firstAttribute="trailing" secondItem="ODt-N7-LAT" secondAttribute="trailing" id="MiS-Ny-P4u"/>
+                <constraint firstItem="ODt-N7-LAT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fO4-bQ-a41"/>
+                <constraint firstAttribute="bottom" secondItem="ODt-N7-LAT" secondAttribute="bottom" id="w7A-Eu-WGy"/>
+            </constraints>
+            <connections>
+                <outlet property="headerImgView" destination="l11-BU-lsM" id="dqb-Uy-ZSf"/>
+                <outlet property="nikeNameLabel" destination="7Z1-6p-Hdj" id="cLG-VB-t11"/>
+                <outlet property="oldManCardBtn" destination="e9f-dH-12D" id="QMu-lI-fGh"/>
+                <outlet property="roleLabel" destination="1nl-rh-PsW" id="Lkn-Cd-cjv"/>
+                <outlet property="sexImgView" destination="lQO-qG-1fa" id="7rv-Lq-Jg7"/>
+                <outlet property="sleepStateImgView" destination="xuf-Et-ASH" id="WIA-OR-ZYd"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="defaul_oldManHeaderImg" width="200" height="200"/>
+        <image name="homepage_addoldManCardIcon" width="15" height="15"/>
+        <image name="homepage_sleepGood" width="32" height="16"/>
+        <image name="personalCenter_man" width="10" height="10"/>
+    </resources>
+</document>
