@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  01-百思不得姐
+//
+//  Created by xiaomage on 15/7/22.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
+//
+
+#ifndef _1_______PrefixHeader_pch
+#define _1_______PrefixHeader_pch
+
+#import "UIView+XMGExtension.h"
+#import "UIBarButtonItem+XMGExtension.h"
+#import "NSDate+XMGExtension.h"
+#import "UIImage+XMGExtension.h"
+#import "UIImageView+XMGExtension.h"
+#import <MJExtension/MJExtension.h>
+#import "AAGlobalMacro.h"
+
+#define XMGNoteCenter [NSNotificationCenter defaultCenter]
+
+#ifdef DEBUG
+#define XMGLog(...) NSLog(__VA_ARGS__)
+#else
+#define XMGLog(...)
+#endif
+
+#define BaseUrl  @"http://shopapp.letyy.com/Service/OrderService.svc"
+
+#define XMGLogFunc XMGLog(@"%s", __func__)
+
+#define XMGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define UIColorFromHex(s)  [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]
+
+#define XMGGlobalBg XMGRGBColor(223, 223, 223)
+
+#define XMGTagBg XMGRGBColor(74, 139, 209)
+#define XMGTagFont [UIFont systemFontOfSize:14]
+
+#define XMGScreenW [UIScreen mainScreen].bounds.size.width
+#define XMGScreenH [UIScreen mainScreen].bounds.size.height
+
+//是否显示加载圆环
+#define HIDEMBHUBKEY @"HideMBHUB"
+
+//返回数据的字段名
+#define RESPONSECODEKEY @"RetCode"
+#define RESPONSEMSGKEY @"RetMsg"
+#define RESPONSEDATAKEY @"RetData"
+
+//用户登陆数据key
+#define NDLOGINUSERINFOKEY @"loginUserInfo"
+#define NDUserInfoKey NSStringFromClass([NdShopUserInfo class])
+#define NDUserInfoData ((NdShopUserInfo*)[[NDLocalArchiveTool getInstanse] getArchiveWithKEy:NSStringFromClass([NdShopUserInfo class])])
+#define NDUserLocationData ((LocationEntry*)[[NDLocalArchiveTool getInstanse] getArchiveWithKEy:@"userLocation"])
+
+#define NdUserAdrKey @"NDUserAdrData"
+#define NDUserAdrData ((MyAdrEntry*)[[NDLocalArchiveTool getInstanse] getArchiveWithKEy:@"NDUserAdrData"])
+
+
+#define DefaultImg [UIImage imageNamed:@"广告条默认图"]
+//头像
+#define DefaultHeaderImg [UIImage imageNamed:@"头像"]
+
+//通知名称
+
+
+#endif
