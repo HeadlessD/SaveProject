@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HMSOldManFriendShipCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oldMan_addMan" translatesAutoresizingMaskIntoConstraints="NO" id="USs-Np-hdg">
+                        <rect key="frame" x="5" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="EqX-z5-TSK"/>
+                            <constraint firstAttribute="width" constant="40" id="va5-Nb-HLu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIh-Vi-CeN">
+                        <rect key="frame" x="0.0" y="45" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4x0-Fn-EVN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="HIh-Vi-CeN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ftb-8C-QD5"/>
+                <constraint firstItem="USs-Np-hdg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Iva-Mp-W6g"/>
+                <constraint firstItem="USs-Np-hdg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XG5-AU-hF2"/>
+                <constraint firstItem="HIh-Vi-CeN" firstAttribute="top" secondItem="USs-Np-hdg" secondAttribute="bottom" constant="5" id="kCh-id-u4R"/>
+                <constraint firstAttribute="trailing" secondItem="HIh-Vi-CeN" secondAttribute="trailing" id="ur5-ms-G6i"/>
+            </constraints>
+            <connections>
+                <outlet property="friendHeaderImagView" destination="USs-Np-hdg" id="tZI-8s-YL5"/>
+                <outlet property="nikeNameTitle" destination="HIh-Vi-CeN" id="2Hg-kQ-RNa"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="oldMan_addMan" width="200" height="200"/>
+    </resources>
+</document>

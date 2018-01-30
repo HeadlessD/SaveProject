@@ -1,0 +1,77 @@
+//
+//  PrefixHeader.pch
+//  HealthMonitoringSystem
+//
+//  Created by gw on 2017/6/29.
+//  Copyright © 2017年 mirahome. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark ------------------//公用头文件--------------
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import "SVProgressHUD.h"
+#import "UIView+Extension.h"
+#import "Utilities.h"
+#import "Masonry.h"
+#import "HMSNetWorkManager.h"
+#import "HMSUtils.h"
+#import "HMSAccount.h"
+#import <MJExtension.h>
+#import <Qiniu/QiniuSDK.h>
+
+#pragma mark ------------------//服务器地址--------------
+
+#define HMSTestBaseUrl @"http://api.resthome_monitor.dev.mirahome.me/1.0/"
+
+
+#pragma mark ------------------功能性字段--------------
+
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+//屏幕相对于6的比例
+#define HMS_ScreenScale [UIScreen mainScreen].bounds.size.width / 375
+//屏幕相对于5s的比例
+#define HMS_ScreenScaleWithIP5S [UIScreen mainScreen].bounds.size.width / 320
+//屏幕相对于6P的比例
+#define HMS_ScreenScaleWithIP6P [UIScreen mainScreen].bounds.size.width / 414
+//获取屏幕宽度
+#define KScreenWidth  [UIScreen mainScreen].bounds.size.width
+//获取屏幕高度
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+//iPhone5 or iPhone5s
+#define  iPhone5_5s     (KScreenWidth == 320.f && KScreenHeight == 568.f ? YES : NO)
+//iPhone6 or iPhone6s
+#define  iPhone6_6s     (KScreenWidth == 375.f && KScreenHeight == 667.f ? YES : NO)
+//iPhone6Plus or iPhone6sPlus
+#define  iPhone6_6sPlus (KScreenWidth == 414.f && KScreenHeight == 736.f ? YES : NO)
+
+
+
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define HMSThemeColor UIColorFromRGB(0x1976d2)
+#define HMSCustomColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define HMSCustomARGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define HMSFOND(a) [UIFont systemFontOfSize:a]
+
+#define HMSThemeDeviderColor UIColorFromRGB(0xe1e9ef)
+
+#define HMSThemeBackgroundColor HMSCustomColor(236, 239, 241)
+
+#define KNavItemSize CGSizeMake(22, 22)
+
+/**
+ *  Frame PX  ---> Pt 6的宽度 全部向下取整数
+ */
+#define MHPxConvertPt(__Px) floor((__Px) * KScreenWidth/375.0f)
+
+#endif /* PrefixHeader_pch */
