@@ -2,8 +2,8 @@
 //  UIButton+InitUiCustomBtnWithImgStr.h
 //  booktest
 //
-//  Created by 罗艺 on 2016/12/12.
-//  Copyright © 2016年 罗艺. All rights reserved.
+//  Created by avantech on 2018/1/30.
+//  Copyright © 2018年 豆凯强. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

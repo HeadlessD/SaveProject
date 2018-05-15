@@ -1,9 +1,9 @@
 //
 //  UIColor+XMGExtension.m
-//  01-百思不得姐
+//  
 //
-//  Created by xiaomage on 15/8/6.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by avantech on 2018/1/30.
+//  Copyright © 2018年 豆凯强. All rights reserved.
 //
 
 #import "UIColor+XMGExtension.h"

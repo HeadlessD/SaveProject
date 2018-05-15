@@ -9,7 +9,7 @@
 #import "WGUIKitTool.h"
 
 #define UILABEL_LINE_SPACE 6
-@implementation Utilities
+@implementation WGUIKitTool
 
 @end
 @implementation NSDictionary (Helper)

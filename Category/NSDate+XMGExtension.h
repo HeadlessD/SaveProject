@@ -1,9 +1,9 @@
 //
 //  NSDate+XMGExtension.h
-//  01-百思不得姐
+//  Avantech
 //
-//  Created by xiaomage on 15/7/27.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by avantech on 17/7/27.
+//  Copyright (c) 2017年 豆凯强. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
