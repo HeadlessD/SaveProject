@@ -113,13 +113,13 @@
 - (void)topLineforView{
     UIView* line = [[UIView alloc]init];
     line.frame = CGRectMake(0, 0, self.frame.size.width, 0.5);
-    line.backgroundColor = UIColorFromRGB(0xe6e6e6);
+    line.backgroundColor = WGCOLOR_RGBF(0xe6e6e6);
     [self addSubview:line];
 }
 - (void)topLinepaddingLeft:(CGFloat)left{
     UIView* line = [[UIView alloc]init];
     line.frame = CGRectMake(left, 0, self.frame.size.width, 0.5);
-    line.backgroundColor = UIColorFromRGB(0xe6e6e6);
+    line.backgroundColor = WGCOLOR_RGBF(0xe6e6e6);
     [self addSubview:line];
 }
 - (void)bottomLineforViewWithColor:(UIColor*)color{
@@ -144,31 +144,50 @@
 - (void)bottomWideLineforView:(CGFloat)height{
     UIView* line = [[UIView alloc]init];
     line.frame = CGRectMake(0, self.frame.size.height-height, self.frame.size.width, height);
-    line.backgroundColor = UIColorFromRGB(0xe6e6e6);
+    line.backgroundColor = WGCOLOR_RGBF(0xe6e6e6);
     [self addSubview:line];
 }
 - (void)verticalLinepaddingLeft:(CGFloat)left{
     UIView* line = [[UIView alloc]init];
     line.frame = CGRectMake(left, 0, 1, self.frame.size.height);
-    line.backgroundColor = UIColorFromRGB(0xe6e6e6);
+    line.backgroundColor = WGCOLOR_RGBF(0xe6e6e6);
     [self addSubview:line];
 }
 
 
 -(void)bottomWithShadow
 {
-    self.layer.shadowColor =HMSCustomColor(230, 230, 230).CGColor; //shadowColor阴影颜色
-    self.layer.shadowOffset = CGSizeMake(0 , 2); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
+    self.layer.shadowColor = WGCOLOR_RGB(230, 230, 230).CGColor; //shadowColor阴影颜色
+    self.layer.shadowOffset = WGCGSizeMake(0 , 2); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
     self.layer.shadowOpacity = 0.5;//阴影透明度，默认0
     self.layer.shadowRadius = 1.0f;//阴影半径
     UIBezierPath *path =[UIBezierPath bezierPathWithRect:CGRectMake(0, self.height*0.5, self.width, self.height*0.5)];
     self.layer.shadowPath =path.CGPath;
     
 //    self.layer.shadowColor = [UIColor grayColor].CGColor; //shadowColor阴影颜色
-//    self.layer.shadowOffset = CGSizeMake(0 , 0.5f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
+//    self.layer.shadowOffset = WGCGSizeMake(0 , 0.5f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
 //    self.layer.shadowOpacity = 0.3f;//阴影透明度，默认0
 //    self.layer.shadowRadius = 1.0f;//阴影半径
 }
 
+- (BOOL)isShowingOnKeyWindow
+{
+    // 主窗口
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    // 以主窗口左上角为坐标原点, 计算self的矩形框
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect winBounds = keyWindow.bounds;
+    
+    // 主窗口的bounds 和 self的矩形框 是否有重叠
+    BOOL intersects = CGRectIntersectsRect(newFrame, winBounds);
+    
+    return !self.isHidden && self.alpha > 0.01 && self.window == keyWindow && intersects;
+}
+
++ (instancetype)viewFromXib
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
 
 @end

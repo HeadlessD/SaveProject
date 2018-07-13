@@ -1,9 +1,9 @@
 //
 //  UIImage+XMGExtension.m
-//  01-百思不得姐
+//  Avantech
 //
-//  Created by xiaomage on 15/8/3.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by avantech on 17/8/3.
+//  Copyright (c) 2017年 豆凯强. All rights reserved.
 //
 
 #import "UIImage+XMGExtension.h"
@@ -40,4 +40,19 @@
     NSString *path = [NSString stringWithFormat:@"Skins/%@/%@", dir, name];
     return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:path ofType:nil]];
 }
+
++ (UIImage*)createImageWithColor:(UIColor*)color{
+    
+    CGRect rect=CGRectMake(0.0f,0.0f,1.0f,1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context=UIGraphicsGetCurrentContext();CGContextSetFillColorWithColor(context, [color CGColor]);
+    
+    CGContextFillRect(context, rect);
+    
+    UIImage*theImage=UIGraphicsGetImageFromCurrentImageContext();UIGraphicsEndImageContext();
+    return theImage;
+    
+}
+
 @end

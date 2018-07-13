@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HMSBaseVC : UIViewController
+
 // 带图片的返回按钮
 - (void)setBackNavItem:(NSString *)normalBgImg highLBgImg:(NSString *)highLBgImg imageSize:(CGSize)imageSize;
 // 带图片的左按钮
@@ -25,4 +26,5 @@
 - (void)didPressLeftItem:(UIButton *)btn;
 - (void)didPressRightItem:(UIButton *)btn;
 - (void)didPressBackItem:(UIButton *)btn;
+
 @end
