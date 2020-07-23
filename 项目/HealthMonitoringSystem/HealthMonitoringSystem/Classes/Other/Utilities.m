@@ -531,7 +531,7 @@
     textF.font = font;
     textF.textColor = textColor;
     if (horderColor) {
-        [textF setValue:horderColor forKeyPath:@"_placeholderLabel.textColor"];
+//        [textF setValue:horderColor forKeyPath:@"_placeholderLabel.textColor"];
     }
     if (lineColor) {
         [textF bottomLineforViewWithColor:[UIColor grayColor]];

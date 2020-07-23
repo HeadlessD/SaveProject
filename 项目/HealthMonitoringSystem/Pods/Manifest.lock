@@ -41,6 +41,20 @@ DEPENDENCIES:
   - YYCache
   - YYText (~> 1.0.5)
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - HappyDNS
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - Qiniu
+    - SDWebImage
+    - SVProgressHUD
+    - YYCache
+    - YYText
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
@@ -56,4 +70,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0da9f8c1fc7c9ac52e16869d68196373f0af020e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.8.3

@@ -100,7 +100,6 @@
 		C479FFFF1F15C85400AD5498 /* HMSOldManFriendShipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C479FFFD1F15C85400AD5498 /* HMSOldManFriendShipCell.m */; };
 		C48D30B01F1C59710087A7E7 /* HMSHomePageReleasePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C48D30AF1F1C59710087A7E7 /* HMSHomePageReleasePopView.m */; };
 		C48D30B31F1C96C00087A7E7 /* HMSReleaseCircleOFFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48D30B21F1C96C00087A7E7 /* HMSReleaseCircleOFFriendVC.m */; };
-		C48D30D81F1CA4CB0087A7E7 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C48D30B61F1CA4CB0087A7E7 /* .gitkeep */; };
 		C48D30D91F1CA4CB0087A7E7 /* LPDImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C48D30B71F1CA4CB0087A7E7 /* LPDImagePickerController.bundle */; };
 		C48D30DA1F1CA4CB0087A7E7 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C48D30B91F1CA4CB0087A7E7 /* .gitkeep */; };
 		C48D30DB1F1CA4CB0087A7E7 /* LPDAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48D30BB1F1CA4CB0087A7E7 /* LPDAssetCell.m */; };
@@ -1248,7 +1247,6 @@
 				C437B0B61F04A2F600952D3E /* Sources */,
 				C437B0B71F04A2F600952D3E /* Frameworks */,
 				C437B0B81F04A2F600952D3E /* Resources */,
-				D96719F660C2CA3EA6A8AF9D /* [CP] Embed Pods Frameworks */,
 				54DB4F25F114D7B042B4D668 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1328,6 +1326,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1365,7 +1364,6 @@
 				C48D30D91F1CA4CB0087A7E7 /* LPDImagePickerController.bundle in Resources */,
 				C44B76991F0BAA7D00A49038 /* MLInformationTwoCell.xib in Resources */,
 				C47900001F15C85400AD5498 /* HMSOldManFriendShipCell.xib in Resources */,
-				C48D30D81F1CA4CB0087A7E7 /* .gitkeep in Resources */,
 				C40DE4861F18717800CD21AA /* HMSHomePageOldManCollectionCell.xib in Resources */,
 				C40DE48B1F18769300CD21AA /* HMSHomePageAddOldManCell.xib in Resources */,
 			);
@@ -1394,13 +1392,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthMonitoringSystem-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		54DB4F25F114D7B042B4D668 /* [CP] Copy Pods Resources */ = {
@@ -1409,28 +1410,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthMonitoringSystem/Pods-HealthMonitoringSystem-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthMonitoringSystem/Pods-HealthMonitoringSystem-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D96719F660C2CA3EA6A8AF9D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthMonitoringSystem/Pods-HealthMonitoringSystem-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthMonitoringSystem/Pods-HealthMonitoringSystem-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

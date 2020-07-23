@@ -2,8 +2,8 @@
 //  WGLabel.h
 //  QiaoQiaoCardsDemo
 //
-//  Created by wupei on 15/12/4.
-//  Copyright © 2015年 WuPei. All rights reserved.
+//  Created by 豆凯强 on 15/12/4.
+//  Copyright © 2015年 豆凯强. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

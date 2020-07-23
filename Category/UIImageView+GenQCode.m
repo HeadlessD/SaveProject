@@ -2,8 +2,8 @@
 //  UIImageView+GenQCode.m
 //  NextDoor
 //
-//  Created by 罗艺 on 2017/4/15.
-//  Copyright © 2017年 罗艺. All rights reserved.
+//  Created by 豆凯强 on 2017/4/15.
+//  Copyright © 2017年 豆凯强. All rights reserved.
 //
 
 #import "UIImageView+GenQCode.h"

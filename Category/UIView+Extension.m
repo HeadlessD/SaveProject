@@ -2,8 +2,8 @@
 //  UIView+lineView.m
 //  CircleLove
 //
-//  Created by 张灿 on 14-9-22.
-//  Copyright (c) 2014年 xiaomiaos. All rights reserved.
+//  Created by 豆凯强 on 14-9-22.
+//  Copyright (c) 2014年  . All rights reserved.
 //
 
 #import "UIView+Extension.h"
